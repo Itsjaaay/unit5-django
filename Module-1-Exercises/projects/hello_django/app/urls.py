@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import path
-from .views import hello
+from app.views import hello
+
 
 urlpatterns = [
-    path('hello/', hello, name='hello'),
-    path('', ('http://127.0.0.1:8000')),
+    path("admin/", admin.site.urls),
+    path("hello/", hello),
 ]
